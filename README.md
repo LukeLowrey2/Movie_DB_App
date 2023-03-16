@@ -6,13 +6,8 @@ This project uses React and the [https://www.themoviedb.org/] API to help users 
 
 After creating my initial react app I planned my layouts with Adobe Illustrator.
 
-`Home Page`
 ![Home Page layout](./images/Movie_DB_home.png)
-
-`Movie Page`
 ![Movie Page layout](./images/Movie_DB_movie.png)
-
-`Artist Page`
 ![Artist Page layout](./images/Movie_DB_artist.png)
 
 ### `...`

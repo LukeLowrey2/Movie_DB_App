@@ -2,7 +2,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 
-function App() {
+function singleMovie() {
   const [data, setData] = useState([]);
   return (
     <div className="App">
@@ -19,31 +19,31 @@ function App() {
 
       <div className="body">
         <div>
-          <h1>Today's Featured Movies</h1>
+          <h1>Movie Title</h1>
+          <h2>Year</h2>
         </div>
-        <div>
-          <h1>In Theaters</h1>
+        <div className="movieMedia">
+          {/* Image of movie poster */}
+          <h2>Movie Poster</h2> 
+          {/* Image of movie trailer */}
+          <h2>Movie Trailer</h2>
+        </div>
+        <div className="movieInfo">
+          <h3>Genre</h3>
+          <br></br>
+          <h3>About</h3>
+          <br></br>
+          <h3>Director</h3>
+          <br></br>
+          <h3>Writer</h3>
+          <br></br>
+          <h3>Cast</h3>
         </div>
       </div>
       
 
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
     </div>
   );
 }
 
-export default App;
+export default singleMovie;

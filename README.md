@@ -4,10 +4,16 @@ This project uses React and the [https://www.themoviedb.org/] API to help users 
 
 ## `Beginning Stage`
 
-After creating my initial react app I planned my layouts with Adobe Illustrator.
+After creating my initial react app I mapped out my parent and child components. 
 
-![Home Page layout](./images/Movie_DB_home.png)
-![Movie Page layout](./images/Movie_DB_movie.png)
-![Artist Page layout](./images/Movie_DB_artist.png)
+### Component Mapping
+![Home Page layout](./images/mdbApp_mapping.png)
+
+I then planned my schema/layouts with Adobe Illustrator.
+
+### App Schema
+![App Schema](./images/mdbApp_schema_layouts.png)
+
+
 
 ### `...`

@@ -5,19 +5,8 @@ import React, {useState, useEffect} from 'react';
 function singleArtist() {
   const [data, setData] = useState([]);
   return (
-    <div className="App">
-      <div className="header">
-        <div>
-          {/* This will be the logo which will be a link to the home page */}
-          <h2>Movie DB Logo Image</h2>
-        </div>
 
-        <div>
-          <h2>Search Bar Input</h2>
-        </div>
-      </div>
-
-      <div className="body">
+      <div id="artistSingle">
         <div>
           <h1>Artist Name</h1>
         </div>
@@ -32,8 +21,6 @@ function singleArtist() {
         </div>
       </div>
       
-
-    </div>
   );
 }
 

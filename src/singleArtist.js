@@ -2,7 +2,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 
-function singleArtist() {
+function SingleArtist() {
   const [data, setData] = useState([]);
   return (
 
@@ -24,4 +24,4 @@ function singleArtist() {
   );
 }
 
-export default singleArtist;
+export default SingleArtist;

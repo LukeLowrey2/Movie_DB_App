@@ -2,7 +2,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 
-function singleMovie() {
+function SingleMovie() {
   const [data, setData] = useState([]);
   return (
 
@@ -33,4 +33,4 @@ function singleMovie() {
   );
 }
 
-export default singleMovie;
+export default SingleMovie;

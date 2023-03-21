@@ -2,9 +2,9 @@
 import './App.css';
 import ReactDOM from 'react-dom';
 import React, {useState, useEffect} from 'react';
-import dailyFeature from './dailyFeature';
-import singleMovie from './singleMovie';
-import singleArtist from './singleArtist';
+import DailyFeature from './DailyFeature';
+import singleMovie from './SingleMovie';
+import singleArtist from './SingleArtist';
 
 function App() {
   const [data, setData] = useState([]);
@@ -20,6 +20,8 @@ function App() {
           <h2>Search Bar Input</h2>
         </div>
       </div>
+
+      <DailyFeature />
 
       
       

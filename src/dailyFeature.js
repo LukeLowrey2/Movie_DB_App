@@ -2,7 +2,7 @@
 import './App.css';
 import React, {useState, useEffect} from 'react';
 
-function dailyFeature() {
+function DailyFeature() {
   const [data, setData] = useState([]);
   return (
 
@@ -19,4 +19,4 @@ function dailyFeature() {
   );
 }
 
-export default dailyFeature;
+export default DailyFeature;

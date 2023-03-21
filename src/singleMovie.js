@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+import fetch from 'isomorphic-fetch';
 import React, {useState, useEffect} from 'react';
 
 function SingleMovie() {

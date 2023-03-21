@@ -1,6 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import ReactDOM from 'react-dom';
+import fetch from 'isomorphic-fetch';
 import React, {useState, useEffect} from 'react';
 import DailyFeature from './DailyFeature';
 import singleMovie from './SingleMovie';

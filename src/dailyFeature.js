@@ -30,9 +30,9 @@ function DailyFeature() {
 
       <div id="dailyFreature">
         <div>
-          <h1>Today's Featured Movies</h1>
+          <h1>Today's Trending Movies</h1>
           <ul>
-            {featuredMovies.map((movie) => (
+            {featuredMovies.slice(0, 10).map((movie) => (
             <img
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}

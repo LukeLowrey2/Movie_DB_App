@@ -4,8 +4,8 @@ import ReactDOM from 'react-dom';
 import fetch from 'isomorphic-fetch';
 import React, {useState, useEffect} from 'react';
 import DailyFeature from './DailyFeature';
-import singleMovie from './SingleMovie';
-import singleArtist from './SingleArtist';
+import SingleMovie from './SingleMovie';
+import SingleArtist from './SingleArtist';
 const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
 
       <DailyFeature />
 
-      
+      <SingleMovie/>
       
 
 

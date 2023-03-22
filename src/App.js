@@ -6,6 +6,7 @@ import React, {useState, useEffect} from 'react';
 import DailyFeature from './DailyFeature';
 import singleMovie from './SingleMovie';
 import singleArtist from './SingleArtist';
+const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 function App() {
   const [data, setData] = useState([]);

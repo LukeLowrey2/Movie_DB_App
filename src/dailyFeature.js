@@ -1,13 +1,16 @@
 // import logo from './logo.svg';
 import './App.css';
 import fetch from 'isomorphic-fetch';
+import axios from 'axios';
 import React, {useState, useEffect} from 'react';
+import InTheaters from './InTheaters';
 const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 
 function DailyFeature() {
   // const [data, setData] = useState([]);
   const [featuredMovies, setFeaturedMovies] = useState([]);
+  
 
   useEffect(() => {
     fetch(
@@ -17,8 +20,11 @@ function DailyFeature() {
       .then((data) => setFeaturedMovies(data.results))
       .catch((error) => console.error(error));
   }, []);
+
+  
   
   console.log(featuredMovies)
+  
 
   return (
 
@@ -34,11 +40,11 @@ function DailyFeature() {
       ))}
     </ul>
         </div>
-        <div>
-          <h1>In Theaters</h1>
-        </div>
         
+        <InTheaters/>
       </div>
+
+      
       
   );
 }

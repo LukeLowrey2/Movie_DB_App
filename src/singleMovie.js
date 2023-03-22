@@ -2,6 +2,8 @@
 import './App.css';
 import fetch from 'isomorphic-fetch';
 import React, {useState, useEffect} from 'react';
+const apiKey = "26c91fadd6271c3d546828143a878e17";
+
 
 function SingleMovie() {
   const [data, setData] = useState([]);

@@ -4,6 +4,7 @@ import fetch from 'isomorphic-fetch';
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import VideoSingleMovie from './VideoSingleMovie';
+import CastSingleMovie from './CastSingleMovie';
 const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 
@@ -47,7 +48,7 @@ function SingleMovie() {
           <img
             src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`}
             alt={`${singleMovie.original_title} Movie Poster`}
-            style={{ width: "10%", height: "10%" }}/>
+            style={{ width: "20%", height: "20%" }}/>
           {/* Image of movie trailer */}
           {/* <h2>Movie Trailer</h2> */}
           <VideoSingleMovie/>
@@ -63,7 +64,7 @@ function SingleMovie() {
           <br></br>
           {/* <h3>Writer</h3> */}
           <br></br>
-          {/* <h3>Cast</h3> */}
+          <CastSingleMovie/>
         </div>
       </div>
       

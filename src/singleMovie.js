@@ -3,6 +3,7 @@ import './App.css';
 import fetch from 'isomorphic-fetch';
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
+import VideoSingleMovie from './VideoSingleMovie';
 const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 
@@ -29,7 +30,10 @@ function SingleMovie() {
     // }, [match.params.id]);
   }, []);
 
-    console.log(singleMovie)
+
+  
+
+  console.log(singleMovie)
 
   return (
 
@@ -46,6 +50,7 @@ function SingleMovie() {
             style={{ width: "10%", height: "10%" }}/>
           {/* Image of movie trailer */}
           {/* <h2>Movie Trailer</h2> */}
+          <VideoSingleMovie/>
         </div>
 
         <div id="movieInfo">

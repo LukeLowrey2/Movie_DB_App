@@ -6,6 +6,7 @@ import React, {useState, useEffect} from 'react';
 import DailyFeature from './DailyFeature';
 import SingleMovie from './SingleMovie';
 import SingleArtist from './SingleArtist';
+import SearchMovies from './SearchMovies';
 const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 function App() {
@@ -18,9 +19,7 @@ function App() {
           <h2>Movie DB Logo Image</h2>
         </div>
 
-        <div>
-          <h2>Search Bar Input</h2>
-        </div>
+        <SearchMovies/>
       </div>
 
       <DailyFeature />

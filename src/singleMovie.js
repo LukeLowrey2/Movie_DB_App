@@ -41,7 +41,7 @@ function SingleMovie() {
       <div id="movieSingle">
         <div id="title">
           <h3>{singleMovie.original_title}</h3>
-          <p>{singleMovie.release_date.slice(0,4)}</p>
+          <p>{singleMovie.release_date}</p>
         </div>
         <div id="movieMedia">
           {/* Image of movie poster */}

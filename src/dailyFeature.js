@@ -21,6 +21,12 @@ function DailyFeature() {
       .catch((error) => console.error(error));
   }, []);
 
+  const imageClick = (id) => {
+    console.log("hello from imageClick")
+    const newParamValue = id; // Replace this with the new parameter value
+    window.location.search = `?param=${newParamValue}`;
+    console.log("Movie Id from imageClick", id, newParamValue)
+  };
   
   
   console.log(featuredMovies)
@@ -36,6 +42,7 @@ function DailyFeature() {
             <img
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
+            onClick={() => imageClick(movie.id)}
             style={{ width: "10%", height: "10%" }}/>
       ))}
     </ul>

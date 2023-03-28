@@ -9,12 +9,41 @@ const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 
 function SingleMovie() {
+  const [movieId, setMovieId] = useState("");
   const [singleMovie, setSingleMovie] = useState([]);
+
+  
+
+  // useEffect(() => {
+  //   console.log(window.location.search)
+  //   const searchParams = new URLSearchParams(window.location.search);
+  //   console.log(searchParams)
+  //   const idParam = searchParams.get('param');
+  //   console.log(idParam)
+  //   if (idParam) {
+  //     setMovieId(idParam);
+  //   }
+  // }, []);
+
+  function fetchParamsId(){
+    console.log(window.location.search)
+    const searchParams = new URLSearchParams(window.location.search);
+    console.log(searchParams)
+    const idParam = searchParams.get('param');
+    console.log(idParam)
+    if (idParam) {
+      console.log("fetchParams set to", idParam)
+      return idParam
+    }
+  }
+
+  console.log("movie id from params", movieId)
   
     useEffect(() => {
-      const fetchMovieDetails = async () => {
-        // const movieId = match.params.id;
-        const movieId = 89;
+      const fetchMovieDetails = async (id) => {
+        
+        const movieId = id;
+        // const movieId = 89;
         const response = await axios.get(
           `https://api.themoviedb.org/3/movie/${movieId}`,
           {
@@ -27,9 +56,9 @@ function SingleMovie() {
         setSingleMovie(response.data);
       };
   
-      fetchMovieDetails();
-    // }, [match.params.id]);
-  }, []);
+      fetchMovieDetails(fetchParamsId());
+    }, []);
+  // }, []);
 
 
   
@@ -51,7 +80,7 @@ function SingleMovie() {
             style={{ width: "20%", height: "20%" }}/>
           {/* Image of movie trailer */}
           {/* <h2>Movie Trailer</h2> */}
-          <VideoSingleMovie/>
+          <VideoSingleMovie movieId={fetchParamsId()}/>
         </div>
 
         <div id="movieInfo">
@@ -64,7 +93,7 @@ function SingleMovie() {
           <br></br>
           {/* <h3>Writer</h3> */}
           <br></br>
-          <CastSingleMovie/>
+          <CastSingleMovie movieId={fetchParamsId()}/>
         </div>
       </div>
       

@@ -36,7 +36,7 @@ function SearchMovies() {
         <input type="text" placeholder="Search Movies" value={searchTerm} onChange={handleChange} />
         <ul>
           {movies.slice(0,5).map((movie) => (
-            <li key={movie.id}>{movie.title}</li>
+            <p key={movie.id}>{movie.title}</p>
           ))}
         </ul>
       </div>

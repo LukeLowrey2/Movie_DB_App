@@ -6,7 +6,7 @@ const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 function SearchMovies() {
     const [searchTerm, setSearchTerm] = useState('');
-    const [movies, setMovies] = useState([]);
+    const [searchMovies, setSearchMovies] = useState([]);
   
     const handleChange = (event) => {
       setSearchTerm(event.target.value);
@@ -23,20 +23,29 @@ function SearchMovies() {
             },
           }
         );
-        setMovies(response.data.results);
+        setSearchMovies(response.data.results);
       };
   
       if (searchTerm.length > 0) {
         fetchMovies();
       }
     }, [searchTerm]);
+
+    console.log("Movies from search", searchMovies)
+
+    const searchClick = (id) => {
+      console.log("hello from imageClick")
+      const newParamValue = id; // Replace this with the new parameter value
+      window.location.search = `?param=${newParamValue}`;
+      console.log("Movie Id from imageClick", id, newParamValue)
+    };
   
     return (
       <div>
         <input type="text" placeholder="Search Movies" value={searchTerm} onChange={handleChange} />
         <ul>
-          {movies.slice(0,5).map((movie) => (
-            <p key={movie.id}>{movie.title}</p>
+          {searchMovies.slice(0,5).map((searchMovie) => (
+            <p key={searchMovie.id} onClick={() => searchClick(searchMovie.id)}>{searchMovie.title}</p>
           ))}
         </ul>
       </div>

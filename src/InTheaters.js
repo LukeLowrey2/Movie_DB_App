@@ -4,7 +4,7 @@ import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 const apiKey = "26c91fadd6271c3d546828143a878e17";
 
-function InTheaters() {
+function InTheaters(props) {
     const [inTheaters, setInTheaters] = useState([]);
   
     useEffect(() => {
@@ -35,6 +35,7 @@ function InTheaters() {
             <img
             src={`https://image.tmdb.org/t/p/w500/${theaterMovie.poster_path}`}
             alt={theaterMovie.title}
+            onClick={() => props.onClick(theaterMovie.id)}
             style={{ width: "10%", height: "10%" }}/>
           ))}
         </ul>

@@ -48,7 +48,7 @@ function DailyFeature() {
     </ul>
         </div>
         
-        <InTheaters/>
+        <InTheaters onClick={imageClick}/>
       </div>
 
       

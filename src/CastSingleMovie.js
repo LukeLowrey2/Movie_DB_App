@@ -49,13 +49,13 @@ function CastSingleMovie(props) {
         <p>Writer - {writer}</p>
         <ul>
           {cast.slice(0,10).map((castMember) => (
-            <li key={castMember.id}>
+            <p key={castMember.id}>
               {/* <img
                 src={`https://image.tmdb.org/t/p/w500${castMember.profile_path}`}
                 alt={castMember.name}
               /> */}
               {castMember.character} - {castMember.name}
-            </li>
+            </p>
           ))}
         </ul>
       </div>

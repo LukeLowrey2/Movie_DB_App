@@ -63,38 +63,58 @@ function SingleMovie() {
 
   
 
-  console.log(singleMovie)
+  console.log("single movie", singleMovie)
 
   return (
 
       <div id="movieSingle">
+        {singleMovie.length === 0 ? (
+            <br></br>
+            
+          ) : (
+
         <div id="title">
           <h3>{singleMovie.original_title}</h3>
           <p>{singleMovie.release_date}</p>
         </div>
-        <div id="movieMedia">
-          {/* Image of movie poster */}
+          )}
+
+
+        {/* <div id="movieMedia">
+          
           <img
             src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`}
-            alt={`${singleMovie.original_title} Movie Poster`}
+            alt={`Movie Poster`}
             style={{ width: "20%", height: "20%" }}/>
-          {/* Image of movie trailer */}
-          {/* <h2>Movie Trailer</h2> */}
+          
           <VideoSingleMovie movieId={fetchParamsId()}/>
+        </div> */}
+
+        <div>
+          {singleMovie.length === 0 ? (
+            <br></br>
+            
+          ) : (
+            <div>
+            <img
+            src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`}
+            alt={`Movie Poster`}
+            style={{ width: "20%", height: "20%" }}/>
+          <VideoSingleMovie movieId={fetchParamsId()}/>
+          </div>
+          )}
         </div>
 
+        {singleMovie.length === 0 ? (
+            <br></br>
+            
+          ) : (
         <div id="movieInfo">
-
-          {/* <p>Genre</p> */}
-          <br></br>
           <p>{singleMovie.overview}</p>
-          <br></br>
-          {/* <h3>Director</h3> */}
-          <br></br>
-          {/* <h3>Writer</h3> */}
           <br></br>
           <CastSingleMovie movieId={fetchParamsId()}/>
         </div>
+          )}
       </div>
       
   );

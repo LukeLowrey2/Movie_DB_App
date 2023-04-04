@@ -2,7 +2,8 @@
 import './App.css';
 import ReactDOM from 'react-dom';
 import fetch from 'isomorphic-fetch';
-import React, {useState, useEffect} from 'react';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import DailyFeature from './DailyFeature';
 import SingleMovie from './SingleMovie';
 import SingleArtist from './SingleArtist';
@@ -29,18 +30,23 @@ function App() {
     <div className="App">
       <div id="header">
         <div>
-          {/* This will be the logo which will be a link to the home page */}
           <h2>Movie DB Logo Image</h2>
         </div>
-
-        <SearchMovies/>
+        
       </div>
+      
+      <div className="Main">
+        <div>
+          <DailyFeature/>
+        </div>
 
-      <DailyFeature  />
+        <div>
+        <SearchMovies/>
+        <SingleMovie/>
+          
+        </div>
 
-      <SingleMovie 
-      // movieId={movieId} 
-      />
+      </div>
       
 
 

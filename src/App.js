@@ -11,39 +11,23 @@ import SearchMovies from './SearchMovies';
 const apiKey = "26c91fadd6271c3d546828143a878e17";
 
 function App() {
-  // const [movieId, setMovieId] = useState("");
-
-  // useEffect(() => {
-  //   console.log(window.location.search)
-  //   const searchParams = new URLSearchParams(window.location.search);
-  //   console.log(searchParams)
-  //   const idParam = searchParams.get('param');
-  //   console.log(idParam)
-  //   if (idParam) {
-  //     setMovieId(idParam);
-  //   }
-  // }, []);
-
-  // console.log("movie id from params", movieId)
 
   return (
     <div className="App">
-      <div id="header">
+      <header>
         <div>
-          <h2>Movie DB Logo Image</h2>
-        </div>
-        
-      </div>
+          <h1>Movie DB Logo Image</h1>
+        </div> 
+      </header>
       
-      <div className="Main">
-        <div>
+      <div className="main">
+        <div className="left-main">
           <DailyFeature/>
         </div>
 
-        <div>
+        <div className="right-main">
         <SearchMovies/>
-        <SingleMovie/>
-          
+        <SingleMovie/>          
         </div>
 
       </div>

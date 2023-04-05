@@ -47,7 +47,7 @@ function CastSingleMovie(props) {
         <h3>Movie Credits</h3>
         <p>Director - {director}</p>
         <p>Writer - {writer}</p>
-        <ul>
+        <div>
           {cast.slice(0,10).map((castMember) => (
             <p key={castMember.id}>
               {/* <img
@@ -57,7 +57,7 @@ function CastSingleMovie(props) {
               {castMember.character} - {castMember.name}
             </p>
           ))}
-        </ul>
+        </div>
       </div>
     );
   }

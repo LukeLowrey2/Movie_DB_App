@@ -29,16 +29,16 @@ function InTheaters(props) {
   
     return (
       <div>
-        <h1>In Theaters</h1>
-        <ul>
+        <h2>In Theaters</h2>
+        <div className="daily-lists">
           {inTheaters.map((theaterMovie) => (
             <img
             src={`https://image.tmdb.org/t/p/w500/${theaterMovie.poster_path}`}
             alt={theaterMovie.title}
             onClick={() => props.onClick(theaterMovie.id)}
-            style={{ width: "10%", height: "10%" }}/>
+            style={{ width: "75px", height: "110px" }}/>
           ))}
-        </ul>
+        </div>
       </div>
     );
   }

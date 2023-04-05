@@ -11,3 +11,72 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  background-color: rgb(211, 251, 255);
+  width: 100%;
+  padding-left: 20px; 
+  border-bottom: solid;
+}
+
+img{
+  padding: 2px;
+}
+
+.main {
+  display: flex;
+  justify-content: flex-start;
+  border: solid;
+  padding-top: 50px;
+}
+
+.left-main{
+  display: flex;
+  align-content: flex-start;
+  text-align: left;
+  padding: 20px;
+  width: 25%;
+  background-color: rgb(127, 234, 241);
+  
+}
+
+.right-main{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  width: 75%;
+  padding: 40px;
+  padding-top: 50px;
+}
+
+.trending{
+  display: flex;
+  flex-direction:column;
+  justify-content: flex-start;
+}
+
+.daily-lists{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie-title{
+  display: flex;
+  justify-content:flex-start;
+  align-items:baseline;
+}
+
+.movie-media{
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  
+}
+
+.movie-info{
+  text-align: left;
+}

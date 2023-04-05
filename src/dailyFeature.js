@@ -35,17 +35,17 @@ function DailyFeature() {
   return (
 
       <div id="dailyFreature">
-        <div>
-          <h1>Today's Trending Movies</h1>
-          <ul>
-            {featuredMovies.slice(0, 10).map((movie) => (
+        <div className="trending">
+          <h2>Today's Trending Movies</h2>
+          <div className="daily-lists">
+            {featuredMovies.slice(0, 12).map((movie) => (
             <img
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
             onClick={() => imageClick(movie.id)}
-            style={{ width: "10%", height: "10%" }}/>
+            style={{ width: "75px", height: "110px" }}/>
       ))}
-    </ul>
+    </div>
         </div>
         
         <InTheaters onClick={imageClick}/>

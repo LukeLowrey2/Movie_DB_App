@@ -12,19 +12,6 @@ function SingleMovie() {
   const [movieId, setMovieId] = useState("");
   const [singleMovie, setSingleMovie] = useState([]);
 
-  
-
-  // useEffect(() => {
-  //   console.log(window.location.search)
-  //   const searchParams = new URLSearchParams(window.location.search);
-  //   console.log(searchParams)
-  //   const idParam = searchParams.get('param');
-  //   console.log(idParam)
-  //   if (idParam) {
-  //     setMovieId(idParam);
-  //   }
-  // }, []);
-
   function fetchParamsId(){
     console.log(window.location.search)
     const searchParams = new URLSearchParams(window.location.search);
@@ -43,7 +30,7 @@ function SingleMovie() {
       const fetchMovieDetails = async (id) => {
         
         const movieId = id;
-        // const movieId = 89;
+        
         const response = await axios.get(
           `https://api.themoviedb.org/3/movie/${movieId}`,
           {
@@ -58,7 +45,7 @@ function SingleMovie() {
   
       fetchMovieDetails(fetchParamsId());
     }, []);
-  // }, []);
+  
 
 
   
@@ -73,29 +60,20 @@ function SingleMovie() {
             
           ) : (
 
-        <div id="title">
-          <h3>{singleMovie.original_title}</h3>
+        <div className="movie-title">
+          <h2>{singleMovie.original_title}</h2>
+          
           <p>{singleMovie.release_date}</p>
         </div>
           )}
 
 
-        {/* <div id="movieMedia">
-          
-          <img
-            src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`}
-            alt={`Movie Poster`}
-            style={{ width: "20%", height: "20%" }}/>
-          
-          <VideoSingleMovie movieId={fetchParamsId()}/>
-        </div> */}
-
-        <div>
+        <div >
           {singleMovie.length === 0 ? (
             <br></br>
             
           ) : (
-            <div>
+            <div className="movie-media">
             <img
             src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`}
             alt={`Movie Poster`}
@@ -109,7 +87,7 @@ function SingleMovie() {
             <br></br>
             
           ) : (
-        <div id="movieInfo">
+        <div className="movie-info">
           <p>{singleMovie.overview}</p>
           <br></br>
           <CastSingleMovie movieId={fetchParamsId()}/>

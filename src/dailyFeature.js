@@ -43,12 +43,14 @@ function DailyFeature() {
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
             alt={movie.title}
             onClick={() => imageClick(movie.id)}
-            style={{ width: "75px", height: "110px" }}/>
+            style={{ width: "5%", height: "auto" }}
+            />
       ))}
-    </div>
+          </div>
         </div>
-        
+        <div>
         <InTheaters onClick={imageClick}/>
+        </div>
       </div>
 
       

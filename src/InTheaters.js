@@ -36,7 +36,8 @@ function InTheaters(props) {
             src={`https://image.tmdb.org/t/p/w500/${theaterMovie.poster_path}`}
             alt={theaterMovie.title}
             onClick={() => props.onClick(theaterMovie.id)}
-            style={{ width: "75px", height: "110px" }}/>
+            style={{ width: "5%", height: "auto" }}
+            />
           ))}
         </div>
       </div>

@@ -54,7 +54,7 @@ function SingleMovie() {
 
   return (
 
-      <div id="movieSingle">
+      <div className="movie_single">
         {singleMovie.length === 0 ? (
             <br></br>
             

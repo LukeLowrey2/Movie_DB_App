@@ -18,6 +18,9 @@ function App() {
         <div>
           <h1>Movie DB Logo Image</h1>
         </div> 
+        <div>
+        {/* <SearchMovies/> */}
+        </div>
       </header>
       
       <div className="main">
@@ -26,6 +29,7 @@ function App() {
         </div>
 
         <div className="right-main">
+        
         <SearchMovies/>
         <SingleMovie/>          
         </div>

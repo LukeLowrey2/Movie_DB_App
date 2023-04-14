@@ -46,7 +46,7 @@ function SearchMovies() {
         <input type="text" placeholder="Search Movies" value={searchTerm} onChange={handleChange} />
         <div className="search_options">
           {searchMovies.slice(0,5).map((searchMovie) => (
-            <p  style={{ cursor: "default" }}key={searchMovie.id} onClick={() => searchClick(searchMovie.id)}>{searchMovie.title}</p>
+            <p  style={{ cursor: "default" }} key={searchMovie.id} onClick={() => searchClick(searchMovie.id)}>{searchMovie.title}</p>
           ))}
         </div>
       </div>

@@ -16,7 +16,12 @@ function App() {
     <div className="App">
       <header>
         <div>
-          <h1>Movie DB Logo Image</h1>
+          {/* <h1>Movie DB Logo Image</h1> */}
+          
+          <a className="app_link" href="http://localhost:3000/" rel="noopener noreferrer">
+              <img className="logo" src="https://i.imgur.com/293pjpB.png" alt="SlvrSearch"></img>
+          </a>
+
         </div> 
         <div>
         {/* <SearchMovies/> */}

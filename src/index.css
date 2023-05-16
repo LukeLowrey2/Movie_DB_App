@@ -75,7 +75,7 @@ img{
 .right-main{
   display: flex;
   /* flex-direction:column; */
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-content: flex-start;
   /* width: 75%; */
   /* border: solid; */

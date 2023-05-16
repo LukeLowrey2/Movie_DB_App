@@ -31,12 +31,13 @@ function InTheaters(props) {
       <div>
         <h2>In Theaters</h2>
         <div className="daily-lists">
-          {inTheaters.map((theaterMovie) => (
+          {inTheaters.slice(0, 19).map((theaterMovie) => (
             <img
+            className="daily-images"
             src={`https://image.tmdb.org/t/p/w500/${theaterMovie.poster_path}`}
             alt={theaterMovie.title}
             onClick={() => props.onClick(theaterMovie.id)}
-            style={{ width: "5%", height: "auto" }}
+            // style={{ width: "5%", height: "auto" }}
             />
           ))}
         </div>

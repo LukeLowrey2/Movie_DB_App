@@ -75,9 +75,10 @@ function SingleMovie() {
           ) : (
             <div className="movie-media">
             <img
+            className="single-movie-image"
             src={`https://image.tmdb.org/t/p/w500/${singleMovie.poster_path}`}
             alt={`Movie Poster`}
-            style={{ width: "20%", height: "20%" }}/>
+            />
           <VideoSingleMovie movieId={fetchParamsId()}/>
           </div>
           )}
@@ -88,7 +89,7 @@ function SingleMovie() {
             
           ) : (
         <div className="movie-info">
-          <p>{singleMovie.overview}</p>
+          <div className="movie-info-copy" >{singleMovie.overview}</div>
           <br></br>
           <CastSingleMovie movieId={fetchParamsId()}/>
         </div>

@@ -40,8 +40,7 @@ function VideoSingleMovie(props) {
         <div>
           {trailer ? (
             <iframe
-              width="560"
-              height="314"
+              className="movie-trailer"
               src={`https://www.youtube.com/embed/${trailer}`}
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -17,8 +17,7 @@ function App() {
       <header>
         <div>
           
-          
-          <a className="app_link" href="http://localhost:3000/" rel="noopener noreferrer">
+          <a className="app_link" href="/" rel="noopener noreferrer">
               <img className="logo" src="https://i.imgur.com/293pjpB.png" alt="SlvrSearch"></img>
           </a>
 

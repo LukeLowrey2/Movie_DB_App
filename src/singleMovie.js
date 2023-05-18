@@ -61,9 +61,9 @@ function SingleMovie() {
           ) : (
 
         <div className="movie-title">
-          <h2>{singleMovie.original_title}</h2>
+          <h1>{singleMovie.original_title}</h1>
           
-          <p>{singleMovie.release_date}</p>
+          <h3>{singleMovie.release_date}</h3>
         </div>
           )}
 

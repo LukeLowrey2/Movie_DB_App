@@ -14,26 +14,22 @@ function App() {
 
   return (
     <div className="App">
-      <header>
-        <div>
-          
+      <header> 
           <a className="app_link" href="/" rel="noopener noreferrer">
               <img className="logo" src="https://i.imgur.com/293pjpB.png" alt="SlvrSearch"></img>
           </a>
-
-        </div> 
-        
+          <SearchMovies/>
       </header>
       
       <div className="main">
-        <div className="left-main">
-          <DailyFeature/>
+       
+        <div className="right-main">
+          
+          <SingleMovie/>          
         </div>
 
-        <div className="right-main">
-        
-        <SearchMovies/>
-        <SingleMovie/>          
+        <div className="left-main">
+          <DailyFeature/>
         </div>
 
       </div>

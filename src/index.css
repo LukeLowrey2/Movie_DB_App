@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin-left: 5%;
-  margin-right: 5%;
-  background-color: rgb(127, 234, 241);
+  /* margin-left: 5%;
+  margin-right: 5%; */
+  background-color: rgb(247, 255, 255);
 }
 
 code {
@@ -19,10 +19,13 @@ header {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  /* position: fixed; */
-  background-color: rgb(127, 234, 241);
-  width: 100%;
-  padding-left: 20px;
+  position: fixed;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(214, 229, 241);
+  border-bottom: solid;
   
   /* border-bottom: solid; */
   
@@ -55,10 +58,9 @@ img{
   flex-direction:column;
   justify-content: space-around;
   /* border: solid; */
-  /* padding-left: 20px;
-  padding-right: 20px; */
-  background-color: rgb(127, 234, 241);
-  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 150px;
 }
 
 .left-main{
@@ -68,7 +70,9 @@ img{
   text-align: left;
   padding: 20px;
   height: 10%;
-  background-color: rgb(211, 251, 255);
+  background-color: rgb(214, 229, 241);
+  border-top: solid;
+  border-bottom: solid;
   
 }
 
@@ -88,16 +92,17 @@ img{
   display: flex;
   flex-direction:column;
   justify-content: flex-start;
+  
 }
 
 .daily-lists{
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .search{
-  margin-right: 50px;
-  z-index: 2;
+  /* margin-right: 50px; */
   /* border: solid; */
   text-align: left;
   font-size: 12px;
@@ -105,7 +110,10 @@ img{
   
 }
 .search_options{
-  background-color: rgb(198, 250, 253);
+  /* background-color: rgb(198, 250, 253); */
+  border-left:solid;
+  
+  padding-left: 10px;
 }
 
 .movie_single{
@@ -115,8 +123,8 @@ img{
 
 .movie-title{
   display: flex;
+  flex-direction: column;
   justify-content:flex-start;
-  align-items:baseline;
 }
 
 .movie-media{
@@ -172,9 +180,21 @@ img{
 
 
 @media only screen and (max-width: 1100px) {
-  /* body {
+  body {
     background-color: rgb(99, 223, 37);
-  } */
+  }
+
+  header{
+    display: flex;
+    flex-direction:column;
+    background-color: rgb(214, 229, 241);
+    border-bottom: solid;
+    padding-bottom: 10px;
+  }
+
+  .main{
+    padding-top: 50%;
+  }
 
   .right-main{
     /* border: dotted; */
@@ -187,7 +207,7 @@ img{
   }
 
   .logo{
-    width: 40%;
+    width: 50%;
     height: auto;
   }
 
@@ -200,6 +220,10 @@ img{
     /* border: dotted; */
     width: 383px;
     height: 215px;
+  }
+
+  .search{
+    width: 100%;
   }
   
 }
@@ -221,4 +245,11 @@ img{
     width: 75%;
     height: auto;
   }
+
+  .movie-info-copy{
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+  
 }

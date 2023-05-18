@@ -38,7 +38,7 @@ function DailyFeature() {
         <div className="trending">
           <h2>Today's Trending Movies</h2>
           <div className="daily-lists">
-            {featuredMovies.slice(0, 19).map((movie) => (
+            {featuredMovies.slice(0, 18).map((movie) => (
             <img
             className="daily-images"
             src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}

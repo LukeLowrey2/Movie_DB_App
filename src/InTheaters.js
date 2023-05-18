@@ -31,7 +31,7 @@ function InTheaters(props) {
       <div>
         <h2>In Theaters</h2>
         <div className="daily-lists">
-          {inTheaters.slice(0, 19).map((theaterMovie) => (
+          {inTheaters.slice(0, 18).map((theaterMovie) => (
             <img
             className="daily-images"
             src={`https://image.tmdb.org/t/p/w500/${theaterMovie.poster_path}`}

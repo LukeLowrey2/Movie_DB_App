@@ -10,6 +10,7 @@ function SearchMovies() {
   
     const handleChange = (event) => {
       setSearchTerm(event.target.value);
+    
     };
   
     useEffect(() => {
@@ -38,14 +39,15 @@ function SearchMovies() {
       const newParamValue = id; // Replace this with the new parameter value
       window.location.search = `?param=${newParamValue}`;
       console.log("Movie Id from imageClick", id, newParamValue)
+
     };
   
     return (
       <div className="search">
-        <h1>Movie Search</h1>
-        <input type="text" placeholder="Search Movies" value={searchTerm} onChange={handleChange} />
+        <h2>Movie Search</h2>
+        <input type="text" placeholder="Title" value={searchTerm} onChange={handleChange} />
         <div className="search_options">
-          {searchMovies.slice(0,5).map((searchMovie) => (
+          {searchMovies.slice(0,4).map((searchMovie) => (
             <p  style={{ cursor: "default" }} key={searchMovie.id} onClick={() => searchClick(searchMovie.id)}>{searchMovie.title}</p>
           ))}
         </div>
